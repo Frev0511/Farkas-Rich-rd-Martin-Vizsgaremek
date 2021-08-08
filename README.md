@@ -1,0 +1,1 @@
+# Farkas-Rich-rd-Martin-Vizsgaremek
