@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import util.DriverManager;
+import util.ListManager;
 
 import java.util.List;
 
@@ -34,7 +35,9 @@ public class SpotifyLoginPage {
         passwordField.sendKeys(password);
         WebElement loginButton = webDriver.findElement(LOGIN_BUTTON);
         loginButton.click();
-        return true;
+        WebElement closeButton = webDriver.findElement(CLOSE_BUTTON);
+        if(closeButton.isDisplayed()) return true;
+        return false;
     }
 
     public boolean PressCloseKey(){

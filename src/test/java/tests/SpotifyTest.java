@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.SpotifyHomePage;
 import pages.SpotifyLoginPage;
+import pages.SpotifyMainPage;
 import util.DriverManager;
+import util.ListManager;
 
 import java.util.List;
 
@@ -19,6 +21,9 @@ public class SpotifyTest {
     DriverManager driverManager;
     SpotifyHomePage spotifyHomePage;
     SpotifyLoginPage spotifyLoginPage;
+    SpotifyMainPage spotifyMainPage;
+    final String username = "farkasrichardev0511@gmail.com";
+    final String password = "Selenium0511";
 
     @BeforeEach
     void init(){
@@ -44,7 +49,7 @@ public class SpotifyTest {
         spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
-        spotifyLoginPage.LoginToPage("farkasrichardev0511@gmail.com","Selenium0511");
+        assertTrue(spotifyLoginPage.LoginToPage(username,password));
     }
 
     @Test
@@ -52,8 +57,20 @@ public class SpotifyTest {
         spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
-        spotifyLoginPage.LoginToPage("farkasrichardev0511@gmail.com","Selenium0511");
+        spotifyLoginPage.LoginToPage(username,password);
         assertTrue(spotifyLoginPage.PressCloseKey());
+    }
+
+    @Test
+    void AddShowListTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyLoginPage.PressCloseKey();
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        assertTrue(spotifyMainPage.AddShowList());
+
     }
 
 
