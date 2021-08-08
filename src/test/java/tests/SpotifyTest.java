@@ -39,6 +39,23 @@ public class SpotifyTest {
         spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
     }
 
+    @Test
+    void LoginToPageTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage("farkasrichardev0511@gmail.com","Selenium0511");
+    }
+
+    @Test
+    void PressCloseKeyTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage("farkasrichardev0511@gmail.com","Selenium0511");
+        assertTrue(spotifyLoginPage.PressCloseKey());
+    }
+
 
 
     @AfterEach
