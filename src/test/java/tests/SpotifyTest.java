@@ -3,14 +3,12 @@ package tests;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import pages.SpotifyHomePage;
 import pages.SpotifyLoginPage;
 import pages.SpotifyMainPage;
+import pages.SpotifyShowListPage;
 import util.DriverManager;
-import util.ListManager;
 
 import java.util.List;
 
@@ -22,13 +20,16 @@ public class SpotifyTest {
     SpotifyHomePage spotifyHomePage;
     SpotifyLoginPage spotifyLoginPage;
     SpotifyMainPage spotifyMainPage;
+    SpotifyShowListPage spotifyShowListPage;
     final String username = "farkasrichardev0511@gmail.com";
     final String password = "Selenium0511";
+    final String file = "Azariah.txt";
 
     @BeforeEach
     void init(){
         driverManager = new DriverManager();
         webDriver = driverManager.GetWebDriver();
+
     }
 
     @Test
@@ -82,11 +83,25 @@ public class SpotifyTest {
         spotifyLoginPage.PressCloseKey();
         spotifyMainPage = new SpotifyMainPage(webDriver);
         spotifyMainPage.AddShowList();
-        spotifyMainPage.AddAMusic("Azariah Rét");
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        spotifyShowListPage = new SpotifyShowListPage(webDriver);
+        spotifyShowListPage.AddAMusicToNewList("Azariah El barto");
+    }
+
+    @Test
+    void AddAShowListTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyLoginPage.PressCloseKey();
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.AddShowList();
+        spotifyShowListPage = new SpotifyShowListPage(webDriver);
+        List<String> showList = spotifyShowListPage.CreateAnListFromFile(file);
+        spotifyShowListPage.AddAMusicToNewList(showList.get(0));
+        driverManager.GetWait(webDriver,5);
+        for(int i = 1; i < showList.size(); i ++){
+            spotifyShowListPage.AddAMusicAnExistingList(showList.get(i));
         }
     }
 

@@ -32,4 +32,10 @@ public class DriverManager {
         return webElement;
     }
 
+    public void GetWait(WebDriver webDriver, int sec){
+        try {
+            GetWebDriverWait(webDriver, sec, By.xpath(""));
+        } catch (Exception e) {
+        }
+    }
 }
