@@ -24,6 +24,11 @@ public class SpotifyTest {
     final String username = "farkasrichardev0511@gmail.com";
     final String password = "Selenium0511";
     final String file = "Azariah.txt";
+    final String[] musicArr = {
+            "Bon Jovi It's My Life",
+            "Bon jovi Born to Follow",
+
+    };
 
     @BeforeEach
     void init(){
@@ -103,6 +108,17 @@ public class SpotifyTest {
         for(int i = 1; i < showList.size(); i ++){
             spotifyShowListPage.AddAMusicAnExistingList(showList.get(i));
         }
+    }
+
+    @Test
+    void SelectAnExistingListTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyLoginPage.PressCloseKey();
+        spotifyShowListPage = new SpotifyShowListPage(webDriver);
+        spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
     }
 
     @AfterEach
