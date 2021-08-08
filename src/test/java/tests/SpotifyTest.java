@@ -73,7 +73,22 @@ public class SpotifyTest {
 
     }
 
-
+    @Test
+    void AddAMusicTest(){
+        spotifyHomePage = new SpotifyHomePage(webDriver);
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyLoginPage.PressCloseKey();
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.AddShowList();
+        spotifyMainPage.AddAMusic("Azariah Rét");
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     @AfterEach
     void quitWebDriver(){
