@@ -15,9 +15,9 @@ public class ListManager {
         driverManager = new DriverManager();
     }
 
-    public List<WebElement> ElementsToList(By LIST){
+    public List<WebElement> ElementsToList(By LIST, String path){
         WebElement list = driverManager.GetWebDriverWait(webDriver,5,LIST);
-        List<WebElement> result = list.findElements(By.xpath("./li"));
+        List<WebElement> result = list.findElements(By.xpath(path));
         return result;
     }
 

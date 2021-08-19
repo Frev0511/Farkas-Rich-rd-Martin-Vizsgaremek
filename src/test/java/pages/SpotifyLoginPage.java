@@ -37,8 +37,9 @@ public class SpotifyLoginPage {
         webVersionButton.click();
         try {
             webDriver.findElement(By.id("onetrust-accept-btn-handler")).click();
-        } catch (Exception e) { }
-        driverManager.GetWait(webDriver,5);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         WebElement rootMenu = webDriver.findElement(MAIN);
         if(rootMenu.isDisplayed()) return true;
         else return false;
