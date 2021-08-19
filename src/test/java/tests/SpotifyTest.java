@@ -4,7 +4,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.SpotifyHomePage;
 import pages.SpotifyLoginPage;
 import pages.SpotifyMainPage;
 import pages.SpotifyShowListPage;
@@ -17,17 +16,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class SpotifyTest {
     WebDriver webDriver;
     DriverManager driverManager;
-    SpotifyHomePage spotifyHomePage;
     SpotifyLoginPage spotifyLoginPage;
     SpotifyMainPage spotifyMainPage;
     SpotifyShowListPage spotifyShowListPage;
-    final String username = "farkasrichardev0511@gmail.com";
+    final String username = "swork0720@gmail.com";
     final String password = "Selenium0511";
     final String file = "Azariah.txt";
     final String[] musicArr = {
             "Bon Jovi It's My Life",
-            "Bon jovi Born to Follow",
-
+            "Bon jovi Born to Follow"
     };
 
     @BeforeEach
@@ -38,42 +35,16 @@ public class SpotifyTest {
     }
 
     @Test
-    void GoToHomePageTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
-        assertTrue(spotifyHomePage.GoToHomePage());
-    }
-
-    @Test
-    void GoToLoginPageTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
-        spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
-    }
-
-    @Test
     void LoginToPageTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
         assertTrue(spotifyLoginPage.LoginToPage(username,password));
     }
 
-    @Test
-    void PressCloseKeyTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
-        spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
-        spotifyLoginPage.LoginToPage(username,password);
-        assertTrue(spotifyLoginPage.PressCloseKey());
-    }
 
     @Test
     void AddShowListTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
         spotifyLoginPage.LoginToPage(username,password);
-        spotifyLoginPage.PressCloseKey();
         spotifyMainPage = new SpotifyMainPage(webDriver);
         assertTrue(spotifyMainPage.AddShowList());
 
@@ -81,11 +52,8 @@ public class SpotifyTest {
 
     @Test
     void AddAMusicTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
         spotifyLoginPage.LoginToPage(username,password);
-        spotifyLoginPage.PressCloseKey();
         spotifyMainPage = new SpotifyMainPage(webDriver);
         spotifyMainPage.AddShowList();
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
@@ -94,11 +62,8 @@ public class SpotifyTest {
 
     @Test
     void AddAShowListTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
         spotifyLoginPage.LoginToPage(username,password);
-        spotifyLoginPage.PressCloseKey();
         spotifyMainPage = new SpotifyMainPage(webDriver);
         spotifyMainPage.AddShowList();
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
@@ -112,13 +77,26 @@ public class SpotifyTest {
 
     @Test
     void SelectAnExistingListTest(){
-        spotifyHomePage = new SpotifyHomePage(webDriver);
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.GoToLoginPage(spotifyHomePage.FindLoginButton());
         spotifyLoginPage.LoginToPage(username,password);
-        spotifyLoginPage.PressCloseKey();
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
         spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
+    }
+
+    @Test
+    void DeleteShowListTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.DeleteShowList("3. műsorlistám");
+    }
+
+    @Test
+    void SpotifyLogoutTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.SpotifyLogout();
     }
 
     @AfterEach
