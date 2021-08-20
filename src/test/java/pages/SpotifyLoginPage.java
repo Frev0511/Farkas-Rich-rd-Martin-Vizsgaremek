@@ -13,10 +13,11 @@ import java.util.List;
 public class SpotifyLoginPage {
     private WebDriver webDriver;
     private DriverManager driverManager;
+    private final String URL = "https://accounts.spotify.com/hu/login/";
     private final By USERNAME_INPUT_FIELD = By.id("login-username");
     private final By PASSWORD_INPUT_FIELD = By.id("login-password");
     private final By LOGIN_BUTTON = By.id("login-button");
-    private final By CLOSE_BUTTON = By.xpath("//*[contains(@class,'Button-sc-1dqy6lx-0 cLnKJb _1202545091238e5aa5b47b15ab6786fe-scss e810fe421a0b204c0de3771cf655e135-scss')]");
+    private final By WEB_VERSION_BUTTON = By.xpath("//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a");
     private final By MAIN = By.id("main");
 
     public SpotifyLoginPage(WebDriver webDriver){
@@ -24,33 +25,22 @@ public class SpotifyLoginPage {
         driverManager = new DriverManager();
     }
 
-    public void GoToLoginPage(WebElement button){
-        button.click();
-    }
-
     public boolean LoginToPage(String username, String password){
+        webDriver.get(URL);
         WebElement usernameField = webDriver.findElement(USERNAME_INPUT_FIELD);
         usernameField.sendKeys(username);
         WebElement passwordField = webDriver.findElement(PASSWORD_INPUT_FIELD);
         passwordField.sendKeys(password);
         WebElement loginButton = webDriver.findElement(LOGIN_BUTTON);
         loginButton.click();
-        WebElement closeButton = webDriver.findElement(CLOSE_BUTTON);
-        if(closeButton.isDisplayed()) return true;
-        return false;
-    }
-
-    public boolean PressCloseKey(){
-        WebElement closeButton = webDriver.findElement(CLOSE_BUTTON);
-        System.out.println(closeButton.getText());
+        WebElement webVersionButton = webDriver.findElement(WEB_VERSION_BUTTON);
+        webVersionButton.click();
         try {
-            closeButton.click();
-        } catch (Exception e) {
-            new Actions(webDriver).sendKeys(Keys.PAGE_DOWN).perform();
-            closeButton.click();
-        }
-        WebElement mainElements = webDriver.findElement(MAIN);
-        if(mainElements.isDisplayed()) return true;
+            webDriver.findElement(By.id("onetrust-accept-btn-handler")).click();
+        } catch (Exception e) { }
+        driverManager.GetWait(webDriver,5);
+        WebElement rootMenu = webDriver.findElement(MAIN);
+        if(rootMenu.isDisplayed()) return true;
         else return false;
     }
 }
