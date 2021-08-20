@@ -69,6 +69,7 @@ public class SpotifyShowListPage {
     public List<WebElement> GetShowList() {
         WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
         List<WebElement> list = showListList.findElements(By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]"));
+        for(WebElement e: list) System.out.println(e.getText());
         return list;
     }
 
@@ -85,7 +86,6 @@ public class SpotifyShowListPage {
                         AddAMusicAnExistingList(musicArr[i]);
                     }
                 }
-                else System.out.println("Nincs ilyen lista!");
             }
         }
     }

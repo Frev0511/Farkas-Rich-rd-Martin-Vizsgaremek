@@ -42,31 +42,41 @@ public class SpotifyMainPage {
         return list.size();
     }
 
+    public List<WebElement> GetShowList() {
+
+        WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
+        List<WebElement> list = showListList.findElements(By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]"));
+        return list;
+    }
+
     public boolean AddShowList() {
         int beforeList = GetShowListSize();
-        System.out.println(beforeList);
         WebElement addShowListButton = webDriver.findElement(SHOW_LIST_BUTTON);
+        driverManager.GetWait(webDriver,5);
         addShowListButton.click();
         driverManager.GetWait(webDriver,5);
         int afterList = GetShowListSize();
-        System.out.println(afterList);
         if (beforeList < afterList) return true;
         else return false;
     }
 
-    public boolean DeleteShowList(String listName){
+    public boolean DeleteShowLists(){
         listManager  = new ListManager(webDriver);
         int beforeList = GetShowListSize();
-        WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
-        List<WebElement> list = showListList.findElements(By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]"));
-        WebElement removeElement = listManager.FindElementFromList(list,listName);
-        Actions actions = new Actions(webDriver);
-        actions.contextClick(removeElement).perform();
-        List<WebElement> optionList = listManager.ElementsToList(OPTION_LIST, "./li/button");
-        WebElement deleteButton = listManager.FindElementFromList(optionList,"Törlés");
-        deleteButton.click();
+        List<WebElement> existingLists = GetShowList();
+        for(int i = 0; i < existingLists.size() -1; i ++) {
+            if (existingLists.size() != 0 && existingLists.size() != 1) {
+                Actions actions = new Actions(webDriver);
+                actions.contextClick(existingLists.get(i)).perform();
+                WebElement deleteButton = webDriver.findElement(By.xpath("//*[@id=\"context-menu\"]/ul/li[5]/button"));
+                deleteButton.click();
+                WebElement deleteButton2;
+                deleteButton2 = driverManager.GetWebDriverWait(webDriver, 5, By.xpath("//*[contains(@class,'PzcmS_Z8j0D6n3ZEmv20 nrWs9ympjWITXKIXd_7y')]"));
+                deleteButton2.click();
+            }
+        }
         int afterList = GetShowListSize();
-        if(afterList < beforeList) return true;
+        if(afterList <= beforeList) return true;
         else return false;
     }
 
