@@ -13,13 +13,14 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class SpotifyTest {
     WebDriver webDriver;
     DriverManager driverManager;
     SpotifyLoginPage spotifyLoginPage;
     SpotifyMainPage spotifyMainPage;
     SpotifyShowListPage spotifyShowListPage;
-    final String username = "swork0720@gmail.com";
+    final String username = "farkasrichardev0511@gmail.com";
     final String password = "Selenium0511";
     final String file = "Azariah.txt";
     final String[] musicArr = {
@@ -83,13 +84,6 @@ public class SpotifyTest {
         spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
     }
 
-    @Test
-    void DeleteShowListTest(){
-        spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.LoginToPage(username,password);
-        spotifyMainPage = new SpotifyMainPage(webDriver);
-        spotifyMainPage.DeleteShowList("3. műsorlistám");
-    }
 
     @Test
     void SpotifyLogoutTest(){
@@ -97,6 +91,22 @@ public class SpotifyTest {
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
         spotifyMainPage.SpotifyLogout();
+    }
+
+    @Test
+    void DeleteListsTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        assertTrue(spotifyMainPage.DeleteShowLists());
+    }
+
+    @Test
+    void TopListToListTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.TopListToList();
     }
 
     @AfterEach
