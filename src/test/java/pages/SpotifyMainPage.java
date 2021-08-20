@@ -9,6 +9,7 @@ import util.ListManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -96,6 +97,19 @@ public class SpotifyMainPage {
             topList.add(topListContinuedList.get(i));
         }
         System.out.println(topList.size());
+        return true;
+    }
+
+    public boolean WriteTheShowListToFile(){
+        try {
+            FileWriter myWriter = new FileWriter("Lista nevek.txt");
+            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         return true;
     }
 
