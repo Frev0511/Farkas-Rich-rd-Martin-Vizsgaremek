@@ -29,6 +29,10 @@ public class SpotifyMainPage {
     private final By LOGOUT_BUTTON = By.xpath("//*[@id=\"context-menu\"]/div/ul/li[4]/button");
     private final By MAIN = By.id("main");
     private final By OPTION_LIST = By.xpath("/html/body/div[15]/div/ul");
+    private final By TOP_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div/div/section[1]/div[2]");
+    private final By ALL_BUTTON = By.xpath("//*[contains(@class,'tJAIYSfsDs3HsXDAPenF')]");
+    private final By TOP_LIST_CONTINUED = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/div/section/div/div/section/div[2]");
+
 
     public SpotifyMainPage(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -78,6 +82,21 @@ public class SpotifyMainPage {
         int afterList = GetShowListSize();
         if(afterList <= beforeList) return true;
         else return false;
+    }
+
+    public boolean TopListToList(){
+        WebElement topListElement = webDriver.findElement(TOP_LIST);
+        List<WebElement> topList = topListElement.findElements(By.xpath("./div"));
+        System.out.println(topList.size());
+        WebElement allButton = webDriver.findElement(ALL_BUTTON);
+        allButton.click();
+        WebElement topListContinued = webDriver.findElement(TOP_LIST_CONTINUED);
+        List<WebElement> topListContinuedList = topListContinued.findElements(By.xpath("./div"));
+        for(int i = 0; i < topListContinuedList.size(); i ++){
+            topList.add(topListContinuedList.get(i));
+        }
+        System.out.println(topList.size());
+        return true;
     }
 
     public boolean SpotifyLogout(){

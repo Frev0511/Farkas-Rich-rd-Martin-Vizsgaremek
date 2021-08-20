@@ -83,6 +83,14 @@ public class SpotifyTest {
         spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
     }
 
+    @Test
+    void DeleteListsTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        assertTrue(spotifyMainPage.DeleteShowLists());
+    }
+
 
     @Test
     void SpotifyLogoutTest(){
@@ -93,11 +101,11 @@ public class SpotifyTest {
     }
 
     @Test
-    void DeleteListsTest(){
+    void TopListToListTest(){
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
-        assertTrue(spotifyMainPage.DeleteShowLists());
+        spotifyMainPage.TopListToList();
     }
 
     @AfterEach
