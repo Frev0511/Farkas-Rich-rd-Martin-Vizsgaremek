@@ -23,14 +23,9 @@ public class SpotifyMainPage {
     private final By SHOW_LIST_BUTTON = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes')]");
     private final By SHOW_LIST = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]");
     private final By SHOW_LIST_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/nav/div[1]/div[2]/div/div[4]/div[4]/div/div/ul/div/div[2]");
-    private final By SEARCH_INPUT_FIELD = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/section/div/div/input");
-    private final By ADD_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/div/div/div/div[2]/div[1]/div/div[3]/button");
-    private final By SEARCH_INPUT_FIELD_EXISTING_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/section/div/div/input");
-    private final By ADD_EXISTING_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/div[2]/div/div/div[2]/div[1]/div/div[3]/button");
     private final By ACCOUNT_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[1]/header/button[2]");
     private final By LOGOUT_BUTTON = By.xpath("//*[@id=\"context-menu\"]/div/ul/li[4]/button");
     private final By MAIN = By.id("main");
-    private final By OPTION_LIST = By.xpath("/html/body/div[15]/div/ul");
     private final By TOP_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div/div/section[1]/div[2]");
     private final By ALL_BUTTON = By.xpath("//*[contains(@class,'tJAIYSfsDs3HsXDAPenF')]");
     private final By TOP_LIST_CONTINUED = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/div/section/div/div/section/div[2]");
@@ -105,11 +100,13 @@ public class SpotifyMainPage {
     }
 
     public boolean WriteTheShowListToFile(){
+        List<WebElement> showList = GetShowList();
         try {
             FileWriter myWriter = new FileWriter("Listanevek.txt");
-            myWriter.write("a");
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
+            for (int i = 0; i < GetShowListSize(); i ++) {
+                myWriter.write(showList.get(i) + "" + "\n");
+                myWriter.close();
+            }
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
