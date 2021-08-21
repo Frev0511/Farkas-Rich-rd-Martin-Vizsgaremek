@@ -21,6 +21,7 @@ public class SpotifyMainPage {
     private DriverManager driverManager;
     private ListManager listManager;
     private final By SHOW_LIST_BUTTON = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes')]");
+    private final By SHOW_LIST = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]");
     private final By SHOW_LIST_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/nav/div[1]/div[2]/div/div[4]/div[4]/div/div/ul/div/div[2]");
     private final By SEARCH_INPUT_FIELD = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/section/div/div/input");
     private final By ADD_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/div/div/div/div[2]/div[1]/div/div[3]/button");
@@ -33,6 +34,8 @@ public class SpotifyMainPage {
     private final By TOP_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div/div/section[1]/div[2]");
     private final By ALL_BUTTON = By.xpath("//*[contains(@class,'tJAIYSfsDs3HsXDAPenF')]");
     private final By TOP_LIST_CONTINUED = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/div/section/div/div/section/div[2]");
+    private final By DELETE_BUTTON = By.xpath("//*[@id=\"context-menu\"]/ul/li[5]/button");
+    private final By DELETE_BUTTON_2 = By.xpath("//*[contains(@class,'PzcmS_Z8j0D6n3ZEmv20 nrWs9ympjWITXKIXd_7y')]");
 
 
     public SpotifyMainPage(WebDriver webDriver) {
@@ -43,14 +46,14 @@ public class SpotifyMainPage {
     public int GetShowListSize() {
 
         WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
-        List<WebElement> list = showListList.findElements(By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]"));
+        List<WebElement> list = showListList.findElements(SHOW_LIST);
         return list.size();
     }
 
     public List<WebElement> GetShowList() {
 
-        WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
-        List<WebElement> list = showListList.findElements(By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]"));
+        WebElement showListList = webDriver.findElement(SHOW_LIST);
+        List<WebElement> list = showListList.findElements(SHOW_LIST);
         return list;
     }
 
@@ -74,10 +77,10 @@ public class SpotifyMainPage {
                 Actions actions = new Actions(webDriver);
                 actions.contextClick(existingLists.get(i)).perform();
                 actions.contextClick(existingLists.get(i)).perform();
-                WebElement deleteButton = webDriver.findElement(By.xpath("//*[@id=\"context-menu\"]/ul/li[5]/button"));
+                WebElement deleteButton = webDriver.findElement(DELETE_BUTTON);
                 deleteButton.click();
                 WebElement deleteButton2;
-                deleteButton2 = driverManager.GetWebDriverWait(webDriver, 5, By.xpath("//*[contains(@class,'PzcmS_Z8j0D6n3ZEmv20 nrWs9ympjWITXKIXd_7y')]"));
+                deleteButton2 = webDriver.findElement(DELETE_BUTTON_2);
                 deleteButton2.click();
             }
         }
