@@ -11,6 +11,7 @@ import util.DriverManager;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -52,7 +53,7 @@ public class SpotifyTest {
     }
 
     @Test
-    void AddAMusicTest(){
+    void AddAMusicToNewListTest(){
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
@@ -62,7 +63,7 @@ public class SpotifyTest {
     }
 
     @Test
-    void AddAShowListTest(){
+    void CreateAnListFromFileTest(){
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
@@ -84,21 +85,13 @@ public class SpotifyTest {
         spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
     }
 
-
-    @Test
-    void SpotifyLogoutTest(){
-        spotifyLoginPage = new SpotifyLoginPage(webDriver);
-        spotifyLoginPage.LoginToPage(username,password);
-        spotifyMainPage = new SpotifyMainPage(webDriver);
-        spotifyMainPage.SpotifyLogout();
-    }
-
     @Test
     void DeleteListsTest(){
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
-        assertTrue(spotifyMainPage.DeleteShowLists());
+        spotifyMainPage.DeleteShowLists();
+        assertEquals(2,spotifyMainPage.GetShowListSize());
     }
 
     @Test
@@ -106,7 +99,24 @@ public class SpotifyTest {
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
-        spotifyMainPage.TopListToList();
+        assertTrue(spotifyMainPage.TopListToList() > 5);
+
+    }
+
+    @Test
+    void WriteTheShowListToFileTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.WriteTheShowListToFile();
+    }
+
+    @Test
+    void SpotifyLogoutTest(){
+        spotifyLoginPage = new SpotifyLoginPage(webDriver);
+        spotifyLoginPage.LoginToPage(username,password);
+        spotifyMainPage = new SpotifyMainPage(webDriver);
+        spotifyMainPage.SpotifyLogout();
     }
 
     @AfterEach

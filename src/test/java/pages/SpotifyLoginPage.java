@@ -1,14 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import util.DriverManager;
-import util.ListManager;
-
-import java.util.List;
 
 public class SpotifyLoginPage {
     private WebDriver webDriver;

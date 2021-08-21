@@ -5,21 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import util.DriverManager;
-import util.ListManager;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class SpotifyMainPage {
 
     private WebDriver webDriver;
     private DriverManager driverManager;
-    private ListManager listManager;
     private final By SHOW_LIST_BUTTON = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes')]");
     private final By SHOW_LIST = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]");
     private final By SHOW_LIST_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/nav/div[1]/div[2]/div/div[4]/div[4]/div/div/ul/div/div[2]");
@@ -63,14 +57,12 @@ public class SpotifyMainPage {
         else return false;
     }
 
-    public boolean DeleteShowLists(){
-        listManager  = new ListManager(webDriver);
-        int beforeList = GetShowListSize();
+    public void DeleteShowLists() {
         List<WebElement> existingLists = GetShowList();
-        for(int i = 0; i < existingLists.size() -1; i ++) {
-            if (existingLists.size() > 1) {
+        if (existingLists.size() != 0 && existingLists.size() != 1) {
+            for (int i = 0; i < existingLists.size() - 1; i++) {
+                driverManager.GetWait(webDriver, 5);
                 Actions actions = new Actions(webDriver);
-                actions.contextClick(existingLists.get(i)).perform();
                 actions.contextClick(existingLists.get(i)).perform();
                 WebElement deleteButton = webDriver.findElement(DELETE_BUTTON);
                 deleteButton.click();
@@ -79,12 +71,14 @@ public class SpotifyMainPage {
                 deleteButton2.click();
             }
         }
-        int afterList = GetShowListSize();
-        if(afterList <= beforeList) return true;
-        else return false;
+        else
+        {
+            AddShowList();
+            DeleteShowLists();
+        }
     }
 
-    public boolean TopListToList(){
+    public int TopListToList(){
         WebElement topListElement = webDriver.findElement(TOP_LIST);
         List<WebElement> topList = topListElement.findElements(By.xpath("./div"));
         System.out.println(topList.size());
@@ -96,15 +90,15 @@ public class SpotifyMainPage {
             topList.add(topListContinuedList.get(i));
         }
         System.out.println(topList.size());
-        return true;
+        return topList.size();
     }
 
     public boolean WriteTheShowListToFile(){
         List<WebElement> showList = GetShowList();
         try {
-            FileWriter myWriter = new FileWriter("Listanevek.txt");
-            for (int i = 0; i < GetShowListSize(); i ++) {
-                myWriter.write(showList.get(i) + "" + "\n");
+            for (int i = 0; i < showList.size(); i ++) {
+                FileWriter myWriter = new FileWriter("Listanevek.txt",true);
+                myWriter.write(showList.get(i).getText() + "\n");
                 myWriter.close();
             }
         } catch (IOException e) {

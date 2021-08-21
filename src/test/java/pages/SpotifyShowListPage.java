@@ -25,6 +25,7 @@ public class SpotifyShowListPage {
     private final By ITEMS_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/button");
     private final By SHOW_LIST = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]");
 
+
     public SpotifyShowListPage(WebDriver webDriver){
         this.webDriver = webDriver;
         driverManager = new DriverManager();
@@ -79,6 +80,7 @@ public class SpotifyShowListPage {
         if(existingLists != null){
             for(WebElement existingList: existingLists){
                 if(existingList.getText().contains(listName)){
+                    driverManager.GetWait(webDriver,5);
                     existingList.click();
                     WebElement itemButton = webDriver.findElement(ITEMS_BUTTON);
                     itemButton.click();
