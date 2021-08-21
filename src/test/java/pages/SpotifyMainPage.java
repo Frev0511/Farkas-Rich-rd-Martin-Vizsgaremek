@@ -107,7 +107,7 @@ public class SpotifyMainPage {
     public boolean WriteTheShowListToFile(){
         try {
             FileWriter myWriter = new FileWriter("Listanevek.txt");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.write("a");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
