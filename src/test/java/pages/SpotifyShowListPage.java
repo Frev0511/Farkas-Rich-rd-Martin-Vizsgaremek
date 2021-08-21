@@ -24,19 +24,25 @@ public class SpotifyShowListPage {
     private final By SHOW_LIST_LIST = By.xpath("//*[@id=\"main\"]/div/div[2]/nav/div[1]/div[2]/div/div[4]/div[4]/div/div/ul/div/div[2]");
     private final By ITEMS_BUTTON = By.xpath("//*[@id=\"main\"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div[3]/button");
     private final By SHOW_LIST = By.xpath("//*[contains(@class,'GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--episodes GlueDropTarget--playlists GlueDropTarget--folders')]");
-
+    private final By PLAY_BUTTON = By.xpath("//*[contains(@class, 'OBaPDV8g5lhQbNPmIEwf')]");
 
     public SpotifyShowListPage(WebDriver webDriver){
         this.webDriver = webDriver;
         driverManager = new DriverManager();
     }
 
-    public void AddAMusicToNewList(String musicName) {
+    public boolean AddAMusicToNewList(String musicName) {
         WebElement searchField = webDriver.findElement(SEARCH_INPUT_FIELD);
         searchField.sendKeys(musicName);
         WebElement addButton = webDriver.findElement(ADD_BUTTON);
         addButton.click();
         searchField.clear();
+        try {
+            WebElement playButton = webDriver.findElement(PLAY_BUTTON);
+            return true;
+        }catch (Exception exception){
+            return false;
+        }
     }
 
     public List<String> CreateAnListFromFile(String file) {
@@ -58,38 +64,45 @@ public class SpotifyShowListPage {
     }
 
     public void AddAMusicAnExistingList(String musicName){
-            driverManager.GetWait(webDriver,5);
-            WebElement searchField = webDriver.findElement(SEARCH_INPUT_FIELD_EXISTING_LIST);
-            searchField.clear();
-            searchField.sendKeys(musicName);
-            driverManager.GetWait(webDriver,5);
-            WebElement addButton = driverManager.GetWebDriverWait(webDriver,15,ADD_EXISTING_BUTTON);
-            addButton.click();
-            searchField.clear();
+        driverManager.GetWait(webDriver,5);
+        WebElement searchField = webDriver.findElement(SEARCH_INPUT_FIELD_EXISTING_LIST);
+        searchField.clear();
+        searchField.sendKeys(musicName);
+        driverManager.GetWait(webDriver,5);
+        WebElement addButton = driverManager.GetWebDriverWait(webDriver,15,ADD_EXISTING_BUTTON);
+        addButton.click();
+        searchField.clear();
     }
 
     public List<WebElement> GetShowList() {
         WebElement showListList = webDriver.findElement(SHOW_LIST_LIST);
         List<WebElement> list = showListList.findElements(SHOW_LIST);
-        for(WebElement e: list) System.out.println(e.getText());
         return list;
     }
 
-    public void SelectAnExistingList(String listName, String[] musicArr){
+    public boolean SelectAnExistingList(String listName, String[] musicArr){
         List<WebElement> existingLists = GetShowList();
+        boolean status = false;
         if(existingLists != null){
             for(WebElement existingList: existingLists){
                 if(existingList.getText().contains(listName)){
-                    driverManager.GetWait(webDriver,5);
-                    existingList.click();
-                    WebElement itemButton = webDriver.findElement(ITEMS_BUTTON);
-                    itemButton.click();
-                    driverManager.GetWait(webDriver,5);
-                    for(int i = 0; i < musicArr.length; i ++){
-                        AddAMusicAnExistingList(musicArr[i]);
+                    try {
+                        driverManager.GetWait(webDriver,5);
+                        existingList.click();
+                        WebElement itemButton = webDriver.findElement(ITEMS_BUTTON);
+                        itemButton.click();
+                        driverManager.GetWait(webDriver,5);
+                        for(int i = 0; i < musicArr.length; i ++){
+                            AddAMusicAnExistingList(musicArr[i]);
+                        }
+                        status = true;
+                    } catch (Exception exception){
+                        status = false;
                     }
                 }
             }
         }
+        return status;
     }
+
 }

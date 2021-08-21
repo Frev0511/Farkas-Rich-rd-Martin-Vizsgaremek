@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import pages.SpotifyLoginPage;
 import pages.SpotifyMainPage;
+import pages.SpotifyRegisterPage;
 import pages.SpotifyShowListPage;
 import util.DriverManager;
 
@@ -18,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class SpotifyTest {
     WebDriver webDriver;
     DriverManager driverManager;
+    SpotifyRegisterPage spotifyRegisterPage;
     SpotifyLoginPage spotifyLoginPage;
     SpotifyMainPage spotifyMainPage;
     SpotifyShowListPage spotifyShowListPage;
@@ -33,7 +35,13 @@ public class SpotifyTest {
     void init(){
         driverManager = new DriverManager();
         webDriver = driverManager.GetWebDriver();
+    }
 
+    @Test
+    void ReadPrivacyPolicyTest(){
+        spotifyRegisterPage = new SpotifyRegisterPage(webDriver);
+        spotifyRegisterPage.GoToRegisterPage();
+        assertTrue(spotifyRegisterPage.ReadPrivacyPolicy());
     }
 
     @Test
@@ -59,7 +67,7 @@ public class SpotifyTest {
         spotifyMainPage = new SpotifyMainPage(webDriver);
         spotifyMainPage.AddShowList();
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
-        spotifyShowListPage.AddAMusicToNewList("Azariah El barto");
+        assertTrue(spotifyShowListPage.AddAMusicToNewList("Azariah El barto"));
     }
 
     @Test
@@ -82,7 +90,7 @@ public class SpotifyTest {
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
-        spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr);
+        assertTrue(spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr));
     }
 
     @Test
@@ -108,7 +116,7 @@ public class SpotifyTest {
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
-        spotifyMainPage.WriteTheShowListToFile();
+        assertEquals(spotifyMainPage.GetShowListSize(),spotifyMainPage.WriteTheShowListToFile());
     }
 
     @Test
@@ -116,102 +124,11 @@ public class SpotifyTest {
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
         spotifyMainPage = new SpotifyMainPage(webDriver);
-        spotifyMainPage.SpotifyLogout();
+        assertTrue(spotifyMainPage.SpotifyLogout());
     }
 
     @AfterEach
     void quitWebDriver(){
         webDriver.quit();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

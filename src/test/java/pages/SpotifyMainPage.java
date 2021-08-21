@@ -6,8 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import util.DriverManager;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class SpotifyMainPage {
@@ -81,7 +80,6 @@ public class SpotifyMainPage {
     public int TopListToList(){
         WebElement topListElement = webDriver.findElement(TOP_LIST);
         List<WebElement> topList = topListElement.findElements(By.xpath("./div"));
-        System.out.println(topList.size());
         WebElement allButton = webDriver.findElement(ALL_BUTTON);
         allButton.click();
         WebElement topListContinued = webDriver.findElement(TOP_LIST_CONTINUED);
@@ -89,23 +87,31 @@ public class SpotifyMainPage {
         for(int i = 0; i < topListContinuedList.size(); i ++){
             topList.add(topListContinuedList.get(i));
         }
-        System.out.println(topList.size());
         return topList.size();
     }
 
-    public boolean WriteTheShowListToFile(){
+    public int WriteTheShowListToFile(){
         List<WebElement> showList = GetShowList();
         try {
+            PrintWriter writer = new PrintWriter(new FileWriter("Listanevek.txt"));
+            writer.print("");
+            writer.close();
             for (int i = 0; i < showList.size(); i ++) {
-                FileWriter myWriter = new FileWriter("Listanevek.txt",true);
+                FileWriter myWriter;
+                myWriter = new FileWriter("Listanevek.txt",true);
                 myWriter.write(showList.get(i).getText() + "\n");
                 myWriter.close();
             }
+            BufferedReader reader = new BufferedReader(new FileReader("Listanevek.txt"));
+            int lines = 0;
+            while (reader.readLine() != null) lines++;
+            reader.close();
+            return lines;
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
+            return 0;
         }
-        return true;
     }
 
     public boolean SpotifyLogout(){
