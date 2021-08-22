@@ -1,0 +1,101 @@
+[ {
+  "uid" : "77c56f56889b2488",
+  "name" : "LoginToPageTest()",
+  "time" : {
+    "start" : 1629654506517,
+    "stop" : 1629654506664,
+    "duration" : 147
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "317ff1683701520e",
+  "name" : "CreateAnListFromFileTest()",
+  "time" : {
+    "start" : 1629654505777,
+    "stop" : 1629654505952,
+    "duration" : 175
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "37f0d4345c65dca2",
+  "name" : "TopListToListTest()",
+  "time" : {
+    "start" : 1629654505623,
+    "stop" : 1629654505768,
+    "duration" : 145
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2be72321e463d81b",
+  "name" : "ReadPrivacyPolicyTest()",
+  "time" : {
+    "start" : 1629654506196,
+    "stop" : 1629654506357,
+    "duration" : 161
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "38d7afbb6ab1f654",
+  "name" : "AddAMusicToNewListTest()",
+  "time" : {
+    "start" : 1629654505255,
+    "stop" : 1629654505403,
+    "duration" : 148
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "70335d23f3bf0c4b",
+  "name" : "SelectAnExistingListTest()",
+  "time" : {
+    "start" : 1629654505959,
+    "stop" : 1629654506192,
+    "duration" : 233
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "82e44bb258985587",
+  "name" : "WriteTheShowListToFileTest()",
+  "time" : {
+    "start" : 1629654505408,
+    "stop" : 1629654505619,
+    "duration" : 211
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2a3df25d9cc90dfe",
+  "name" : "SpotifyLogoutTest()",
+  "time" : {
+    "start" : 1629654505073,
+    "stop" : 1629654505248,
+    "duration" : 175
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "360705bfaf815550",
+  "name" : "AddShowListTest()",
+  "time" : {
+    "start" : 1629654506365,
+    "stop" : 1629654506514,
+    "duration" : 149
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e67fea04c4814521",
+  "name" : "DeleteListsTest()",
+  "time" : {
+    "start" : 1629654502155,
+    "stop" : 1629654504984,
+    "duration" : 2829
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
