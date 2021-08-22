@@ -89,6 +89,7 @@ public class SpotifyTest {
     void SelectAnExistingListTest(){
         spotifyLoginPage = new SpotifyLoginPage(webDriver);
         spotifyLoginPage.LoginToPage(username,password);
+
         spotifyShowListPage = new SpotifyShowListPage(webDriver);
         assertTrue(spotifyShowListPage.SelectAnExistingList("Szerkesztésre lista",musicArr));
     }
