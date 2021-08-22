@@ -1,0 +1,139 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests.SpotifyTest",
+    "children" : [ {
+      "name" : "DeleteListsTest()",
+      "uid" : "67fe9d630b41d575",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654073321,
+        "stop" : 1629654080133,
+        "duration" : 6812
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SpotifyLogoutTest()",
+      "uid" : "556dfa3d8a44d4af",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654080254,
+        "stop" : 1629654080446,
+        "duration" : 192
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "AddAMusicToNewListTest()",
+      "uid" : "c65d2e2bdb1189ee",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654080464,
+        "stop" : 1629654080646,
+        "duration" : 182
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "WriteTheShowListToFileTest()",
+      "uid" : "28609b3f7ff83259",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654080662,
+        "stop" : 1629654080819,
+        "duration" : 157
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TopListToListTest()",
+      "uid" : "97df110859d01b1f",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654080834,
+        "stop" : 1629654081011,
+        "duration" : 177
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CreateAnListFromFileTest()",
+      "uid" : "232c0230ad8c3589",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654081022,
+        "stop" : 1629654081195,
+        "duration" : 173
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SelectAnExistingListTest()",
+      "uid" : "b9e37bb1daba3592",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654081213,
+        "stop" : 1629654081420,
+        "duration" : 207
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "ReadPrivacyPolicyTest()",
+      "uid" : "d35e95029ced1c86",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654081427,
+        "stop" : 1629654081647,
+        "duration" : 220
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "AddShowListTest()",
+      "uid" : "4493466c2eeba076",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654081650,
+        "stop" : 1629654081790,
+        "duration" : 140
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginToPageTest()",
+      "uid" : "2c401194a5ab5c0",
+      "parentUid" : "b8f192172def74397dea42b84052d73d",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629654081793,
+        "stop" : 1629654081945,
+        "duration" : 152
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b8f192172def74397dea42b84052d73d"
+  } ],
+  "name" : "suites"
+}

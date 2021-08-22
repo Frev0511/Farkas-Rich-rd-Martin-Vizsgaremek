@@ -1,0 +1,101 @@
+[ {
+  "uid" : "d35e95029ced1c86",
+  "name" : "ReadPrivacyPolicyTest()",
+  "time" : {
+    "start" : 1629654081427,
+    "stop" : 1629654081647,
+    "duration" : 220
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "67fe9d630b41d575",
+  "name" : "DeleteListsTest()",
+  "time" : {
+    "start" : 1629654073321,
+    "stop" : 1629654080133,
+    "duration" : 6812
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c65d2e2bdb1189ee",
+  "name" : "AddAMusicToNewListTest()",
+  "time" : {
+    "start" : 1629654080464,
+    "stop" : 1629654080646,
+    "duration" : 182
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "4493466c2eeba076",
+  "name" : "AddShowListTest()",
+  "time" : {
+    "start" : 1629654081650,
+    "stop" : 1629654081790,
+    "duration" : 140
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b9e37bb1daba3592",
+  "name" : "SelectAnExistingListTest()",
+  "time" : {
+    "start" : 1629654081213,
+    "stop" : 1629654081420,
+    "duration" : 207
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "28609b3f7ff83259",
+  "name" : "WriteTheShowListToFileTest()",
+  "time" : {
+    "start" : 1629654080662,
+    "stop" : 1629654080819,
+    "duration" : 157
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2c401194a5ab5c0",
+  "name" : "LoginToPageTest()",
+  "time" : {
+    "start" : 1629654081793,
+    "stop" : 1629654081945,
+    "duration" : 152
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "556dfa3d8a44d4af",
+  "name" : "SpotifyLogoutTest()",
+  "time" : {
+    "start" : 1629654080254,
+    "stop" : 1629654080446,
+    "duration" : 192
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "97df110859d01b1f",
+  "name" : "TopListToListTest()",
+  "time" : {
+    "start" : 1629654080834,
+    "stop" : 1629654081011,
+    "duration" : 177
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "232c0230ad8c3589",
+  "name" : "CreateAnListFromFileTest()",
+  "time" : {
+    "start" : 1629654081022,
+    "stop" : 1629654081195,
+    "duration" : 173
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
