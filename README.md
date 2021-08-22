@@ -5,6 +5,7 @@ Automatizált tesztek futtatásához szükséges, hogy a gépen telepítve legye
     - Maven
 
 Futtatás lépései:
+
     1. Nyissunk egy parancssort.
     2. Navigáljunk a projekt mappába (Farkas-Rich-rd-Martin-Vizsgaremek)
     3. Tesztek futtatása: 'mvn clean test' parancs.
