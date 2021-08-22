@@ -33,6 +33,7 @@ public class SpotifyRegisterPage {
         WebElement privacyPolicy = webDriver.findElement(PRIVACY_POLICY_URL);
         try {
             privacyPolicy.click();
+            driverManager.GetWait(webDriver,3);
             return true;
         }catch (Exception exception){
             return false;
