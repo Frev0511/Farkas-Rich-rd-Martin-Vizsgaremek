@@ -1,0 +1,138 @@
+{
+  "uid" : "527c25c063b37154",
+  "name" : "TopListToListTest()",
+  "fullName" : "tests.SpotifyTest.TopListToListTest",
+  "historyId" : "a768fd52ea5797c81c66cb357d52957",
+  "time" : {
+    "start" : 1629727095488,
+    "stop" : 1629727109338,
+    "duration" : 13850
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "init",
+    "time" : {
+      "start" : 1629727095488,
+      "stop" : 1629727095778,
+      "duration" : 290
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "quitWebDriver",
+    "time" : {
+      "start" : 1629727109260,
+      "stop" : 1629727109338,
+      "duration" : 78
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az42-136"
+  }, {
+    "name" : "thread",
+    "value" : "2864@fv-az42-136.ForkJoinPool-1-worker-1(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "tests.SpotifyTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.SpotifyTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "TopListToListTest"
+  }, {
+    "name" : "suite",
+    "value" : "tests.SpotifyTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 4,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "82caf262a0e224bb",
+        "reportUrl" : "https://Frev0511.github.io/Farkas-Rich-rd-Martin-Vizsgaremek/14//#testresult/82caf262a0e224bb",
+        "status" : "broken",
+        "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a\"}\n  (Session info: headless chrome=92.0.4515.131)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az83-618', ip: '10.1.0.23', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.n9GkUz}, goog:chromeOptions: {debuggerAddress: localhost:42759}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 0be0a69a8b4e84f241bece33a3b231d5\n*** Element info: {Using=xpath, value=//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a}",
+        "time" : {
+          "start" : 1629727045007,
+          "stop" : 1629727056691,
+          "duration" : 11684
+        }
+      }, {
+        "uid" : "5a88c9dec37efacf",
+        "reportUrl" : "https://Frev0511.github.io/Farkas-Rich-rd-Martin-Vizsgaremek/13//#testresult/5a88c9dec37efacf",
+        "status" : "broken",
+        "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a\"}\n  (Session info: headless chrome=92.0.4515.131)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az83-618', ip: '10.1.0.23', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.oUedPg}, goog:chromeOptions: {debuggerAddress: localhost:42627}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: e0690bf006ffbad5eaea0276279e67d4\n*** Element info: {Using=xpath, value=//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a}",
+        "time" : {
+          "start" : 1629726384053,
+          "stop" : 1629726395870,
+          "duration" : 11817
+        }
+      }, {
+        "uid" : "b47638e0b593cab2",
+        "reportUrl" : "https://Frev0511.github.io/Farkas-Rich-rd-Martin-Vizsgaremek/12//#testresult/b47638e0b593cab2",
+        "status" : "broken",
+        "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a\"}\n  (Session info: headless chrome=92.0.4515.131)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az36-757', ip: '10.1.0.149', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.wQQ8Js}, goog:chromeOptions: {debuggerAddress: localhost:35125}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: c56e4ae19f765a7d5abb0c1bcdc34e28\n*** Element info: {Using=xpath, value=//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a}",
+        "time" : {
+          "start" : 1629726310571,
+          "stop" : 1629726322019,
+          "duration" : 11448
+        }
+      }, {
+        "uid" : "f2cfc15b34389b46",
+        "reportUrl" : "https://Frev0511.github.io/Farkas-Rich-rd-Martin-Vizsgaremek/9//#testresult/f2cfc15b34389b46",
+        "status" : "broken",
+        "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a\"}\n  (Session info: headless chrome=92.0.4515.131)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'fv-az83-618', ip: '10.1.0.105', os.name: 'Linux', os.arch: 'amd64', os.version: '5.8.0-1039-azure', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.dbopsw}, goog:chromeOptions: {debuggerAddress: localhost:34759}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: cba77851a8d5cb27d39836ab4da87ba5\n*** Element info: {Using=xpath, value=//*[@id=\"app\"]/body/div/div[2]/div/div/div[4]/div/a}",
+        "time" : {
+          "start" : 1629725412155,
+          "stop" : 1629725424035,
+          "duration" : 11880
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "527c25c063b37154.json",
+  "parameterValues" : [ ]
+}
