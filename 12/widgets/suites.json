@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "b8f192172def74397dea42b84052d73d",
+    "name" : "tests.SpotifyTest",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 9,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 10
+    }
+  } ]
+}
