@@ -1,6 +1,0 @@
-pages\SpotifyLoginPage.class
-pages\SpotifyMainPage.class
-tests\SpotifyTest.class
-pages\SpotifyShowListPage.class
-pages\SpotifyRegisterPage.class
-util\DriverManager.class
