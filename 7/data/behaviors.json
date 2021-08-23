@@ -1,0 +1,135 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "DeleteListsTest()",
+    "uid" : "c9bb4e566b2c33c3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723737700,
+      "stop" : 1629723740245,
+      "duration" : 2545
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "SpotifyLogoutTest()",
+    "uid" : "cbc4f2d29b967a3e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723740312,
+      "stop" : 1629723740561,
+      "duration" : 249
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "AddAMusicToNewListTest()",
+    "uid" : "c51c46543bf04704",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723740573,
+      "stop" : 1629723740745,
+      "duration" : 172
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "WriteTheShowListToFileTest()",
+    "uid" : "c8fc516b79c307dd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723740750,
+      "stop" : 1629723740907,
+      "duration" : 157
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TopListToListTest()",
+    "uid" : "2f4d7c4ca80fcba4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723740930,
+      "stop" : 1629723741093,
+      "duration" : 163
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "CreateAnListFromFileTest()",
+    "uid" : "a231ca6b25bc32d1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723741101,
+      "stop" : 1629723741243,
+      "duration" : 142
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "SelectAnExistingListTest()",
+    "uid" : "dfbbe46431c90070",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723741250,
+      "stop" : 1629723741390,
+      "duration" : 140
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "ReadPrivacyPolicyTest()",
+    "uid" : "7128a1df94e3a44b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723741397,
+      "stop" : 1629723741543,
+      "duration" : 146
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "AddShowListTest()",
+    "uid" : "fe045fdb5d423b86",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723741549,
+      "stop" : 1629723741688,
+      "duration" : 139
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "LoginToPageTest()",
+    "uid" : "420781de305c84c3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1629723741691,
+      "stop" : 1629723741880,
+      "duration" : 189
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}
