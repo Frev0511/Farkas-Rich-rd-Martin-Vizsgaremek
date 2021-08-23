@@ -16,7 +16,6 @@ public class DriverManager {
 
     public WebDriver GetWebDriver(){
         WebDriverManager.chromedriver().setup();
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         options.addArguments("--headless");
@@ -25,8 +24,7 @@ public class DriverManager {
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-extensions");
         options.addArguments("start-maximized");
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        WebDriver webDriver = new ChromeDriver();
+        WebDriver webDriver = new ChromeDriver(options);
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         webDriver.manage().window().maximize();
         return webDriver;
