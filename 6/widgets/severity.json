@@ -1,0 +1,101 @@
+[ {
+  "uid" : "d903f2de64e699e4",
+  "name" : "ReadPrivacyPolicyTest()",
+  "time" : {
+    "start" : 1629723491439,
+    "stop" : 1629723491586,
+    "duration" : 147
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e56dbda9832356f4",
+  "name" : "AddAMusicToNewListTest()",
+  "time" : {
+    "start" : 1629723490579,
+    "stop" : 1629723490735,
+    "duration" : 156
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ed42ea2905de80dd",
+  "name" : "CreateAnListFromFileTest()",
+  "time" : {
+    "start" : 1629723491113,
+    "stop" : 1629723491257,
+    "duration" : 144
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9e9fd231a6a600fb",
+  "name" : "SelectAnExistingListTest()",
+  "time" : {
+    "start" : 1629723491265,
+    "stop" : 1629723491435,
+    "duration" : 170
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "788ad128fae71beb",
+  "name" : "AddShowListTest()",
+  "time" : {
+    "start" : 1629723491590,
+    "stop" : 1629723491741,
+    "duration" : 151
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "db88fb359cb877f0",
+  "name" : "DeleteListsTest()",
+  "time" : {
+    "start" : 1629723484613,
+    "stop" : 1629723490201,
+    "duration" : 5588
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1ff8719d3b12a7de",
+  "name" : "WriteTheShowListToFileTest()",
+  "time" : {
+    "start" : 1629723490748,
+    "stop" : 1629723490919,
+    "duration" : 171
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1fbd152f14bdf562",
+  "name" : "TopListToListTest()",
+  "time" : {
+    "start" : 1629723490933,
+    "stop" : 1629723491108,
+    "duration" : 175
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "fdad008046eb7a0a",
+  "name" : "LoginToPageTest()",
+  "time" : {
+    "start" : 1629723491749,
+    "stop" : 1629723491966,
+    "duration" : 217
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b6b388aa36fdd6be",
+  "name" : "SpotifyLogoutTest()",
+  "time" : {
+    "start" : 1629723490295,
+    "stop" : 1629723490566,
+    "duration" : 271
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
