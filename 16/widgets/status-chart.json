@@ -1,0 +1,101 @@
+[ {
+  "uid" : "178c09ac93fc4db8",
+  "name" : "DeleteListsTest()",
+  "time" : {
+    "start" : 1629728755213,
+    "stop" : 1629728757962,
+    "duration" : 2749
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "d13392af31efb89c",
+  "name" : "LoginToPageTest()",
+  "time" : {
+    "start" : 1629728759357,
+    "stop" : 1629728759498,
+    "duration" : 141
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "579f5fb1fe1cc150",
+  "name" : "AddAMusicToNewListTest()",
+  "time" : {
+    "start" : 1629728758224,
+    "stop" : 1629728758380,
+    "duration" : 156
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "dbde174436b801e5",
+  "name" : "WriteTheShowListToFileTest()",
+  "time" : {
+    "start" : 1629728758386,
+    "stop" : 1629728758538,
+    "duration" : 152
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "10e4e1251d498ab8",
+  "name" : "TopListToListTest()",
+  "time" : {
+    "start" : 1629728758545,
+    "stop" : 1629728758694,
+    "duration" : 149
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e9e8c5059e4faf5d",
+  "name" : "SpotifyLogoutTest()",
+  "time" : {
+    "start" : 1629728758056,
+    "stop" : 1629728758219,
+    "duration" : 163
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "cc5a2317a62f675e",
+  "name" : "AddShowListTest()",
+  "time" : {
+    "start" : 1629728759209,
+    "stop" : 1629728759353,
+    "duration" : 144
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ec6daff2aa357193",
+  "name" : "SelectAnExistingListTest()",
+  "time" : {
+    "start" : 1629728758862,
+    "stop" : 1629728759031,
+    "duration" : 169
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "98267b0e3ad66e9b",
+  "name" : "CreateAnListFromFileTest()",
+  "time" : {
+    "start" : 1629728758698,
+    "stop" : 1629728758855,
+    "duration" : 157
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c258af6f08bbb82f",
+  "name" : "ReadPrivacyPolicyTest()",
+  "time" : {
+    "start" : 1629728759036,
+    "stop" : 1629728759204,
+    "duration" : 168
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
