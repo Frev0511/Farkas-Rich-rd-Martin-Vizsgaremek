@@ -1,0 +1,143 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az83-618",
+    "children" : [ {
+      "name" : "2883@fv-az83-618.ForkJoinPool-1-worker-3(16)",
+      "children" : [ {
+        "name" : "AddAMusicToNewListTest()",
+        "uid" : "72f41bb72c1a411d",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726360435,
+          "stop" : 1629726372285,
+          "duration" : 11850
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "LoginToPageTest()",
+        "uid" : "14b062e6d572940e",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726453871,
+          "stop" : 1629726465661,
+          "duration" : 11790
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "SpotifyLogoutTest()",
+        "uid" : "95fd658edfce9d98",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726348574,
+          "stop" : 1629726360422,
+          "duration" : 11848
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "ReadPrivacyPolicyTest()",
+        "uid" : "a5484e31a3709164",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1629726419385,
+          "stop" : 1629726441966,
+          "duration" : 22581
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "AddShowListTest()",
+        "uid" : "283271d9d60ef374",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726441971,
+          "stop" : 1629726453866,
+          "duration" : 11895
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "TopListToListTest()",
+        "uid" : "5a88c9dec37efacf",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726384053,
+          "stop" : 1629726395870,
+          "duration" : 11817
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "CreateAnListFromFileTest()",
+        "uid" : "687c707fadd77b83",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726395874,
+          "stop" : 1629726407623,
+          "duration" : 11749
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "SelectAnExistingListTest()",
+        "uid" : "66e3e796a63e3bfc",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726407630,
+          "stop" : 1629726419381,
+          "duration" : 11751
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "WriteTheShowListToFileTest()",
+        "uid" : "cc117a56e1d92be9",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726372290,
+          "stop" : 1629726384047,
+          "duration" : 11757
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "DeleteListsTest()",
+        "uid" : "257ebcb7a7b3520",
+        "parentUid" : "7094c9367ed03972cf8aeae8e709184e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1629726333876,
+          "stop" : 1629726348488,
+          "duration" : 14612
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7094c9367ed03972cf8aeae8e709184e"
+    } ],
+    "uid" : "7abf5524bb87f4b51b106652103ed65c"
+  } ],
+  "name" : "timeline"
+}
