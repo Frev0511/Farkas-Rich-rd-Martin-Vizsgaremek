@@ -1,0 +1,101 @@
+[ {
+  "uid" : "33f754d706bf6b0",
+  "name" : "LoginToPageTest()",
+  "time" : {
+    "start" : 1629725481770,
+    "stop" : 1629725493540,
+    "duration" : 11770
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "464abf46fb85de24",
+  "name" : "AddAMusicToNewListTest()",
+  "time" : {
+    "start" : 1629725388614,
+    "stop" : 1629725400427,
+    "duration" : 11813
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ebd60e937b7c8378",
+  "name" : "CreateAnListFromFileTest()",
+  "time" : {
+    "start" : 1629725424039,
+    "stop" : 1629725435845,
+    "duration" : 11806
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f2cfc15b34389b46",
+  "name" : "TopListToListTest()",
+  "time" : {
+    "start" : 1629725412155,
+    "stop" : 1629725424035,
+    "duration" : 11880
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "5dda46046bd17ce5",
+  "name" : "ReadPrivacyPolicyTest()",
+  "time" : {
+    "start" : 1629725447520,
+    "stop" : 1629725469972,
+    "duration" : 22452
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c04203cff16570d2",
+  "name" : "WriteTheShowListToFileTest()",
+  "time" : {
+    "start" : 1629725400439,
+    "stop" : 1629725412150,
+    "duration" : 11711
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b2c52f027ad4e0eb",
+  "name" : "SelectAnExistingListTest()",
+  "time" : {
+    "start" : 1629725435853,
+    "stop" : 1629725447516,
+    "duration" : 11663
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "66140eae9305c05c",
+  "name" : "SpotifyLogoutTest()",
+  "time" : {
+    "start" : 1629725376773,
+    "stop" : 1629725388603,
+    "duration" : 11830
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b033186d0dba8563",
+  "name" : "DeleteListsTest()",
+  "time" : {
+    "start" : 1629725362489,
+    "stop" : 1629725376661,
+    "duration" : 14172
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "54e6a38b4f7cc347",
+  "name" : "AddShowListTest()",
+  "time" : {
+    "start" : 1629725469976,
+    "stop" : 1629725481766,
+    "duration" : 11790
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
