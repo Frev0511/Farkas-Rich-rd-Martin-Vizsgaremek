@@ -1,0 +1,139 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests.SpotifyTest",
+    "children" : [ {
+      "name" : "DeleteListsTest",
+      "uid" : "f807055fbe913c62",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833783505,
+        "stop" : 1629833786105,
+        "duration" : 2600
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SpotifyLogoutTest",
+      "uid" : "3bc919774ed22b61",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786184,
+        "stop" : 1629833786358,
+        "duration" : 174
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "AddAMusicToNewListTest",
+      "uid" : "952040594a29ec99",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786365,
+        "stop" : 1629833786528,
+        "duration" : 163
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "WriteTheShowListToFileTest",
+      "uid" : "6364f3a1154b1371",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786532,
+        "stop" : 1629833786676,
+        "duration" : 144
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TopListToListTest",
+      "uid" : "1b712f4fbff3409a",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786680,
+        "stop" : 1629833786818,
+        "duration" : 138
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CreateAnListFromFileTest",
+      "uid" : "5d18332e4e1bb0f3",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786831,
+        "stop" : 1629833786977,
+        "duration" : 146
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "SelectAnExistingListTest",
+      "uid" : "6312c104bae79bc",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833786985,
+        "stop" : 1629833787152,
+        "duration" : 167
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "ReadPrivacyPolicyTest",
+      "uid" : "f50362a866c45293",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833787156,
+        "stop" : 1629833787293,
+        "duration" : 137
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "AddShowListTest",
+      "uid" : "f0771e69f6c61268",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833787296,
+        "stop" : 1629833787454,
+        "duration" : 158
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "LoginToPageTest",
+      "uid" : "d0de07629f6ba26e",
+      "parentUid" : "6a27ae8bd7d0d5f6da6bc0a52b511d3f",
+      "status" : "broken",
+      "time" : {
+        "start" : 1629833787457,
+        "stop" : 1629833787592,
+        "duration" : 135
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.SpotifyTest"
+  } ],
+  "name" : "packages"
+}
