@@ -118,10 +118,14 @@ public class SpotifyMainPage {
     public boolean SpotifyLogout(){
         WebElement accountButton = webDriver.findElement(ACCOUNT_BUTTON);
         accountButton.click();
-        WebElement logoutButton = webDriver.findElement(LOGOUT_BUTTON);
-        logoutButton.click();
-        WebElement main = webDriver.findElement(MAIN);
-        if(main.isDisplayed()) return true;
-        else return false;
+        try{
+            WebElement logoutButton = webDriver.findElement(LOGOUT_BUTTON);
+            logoutButton.click();
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
+
     }
 }
