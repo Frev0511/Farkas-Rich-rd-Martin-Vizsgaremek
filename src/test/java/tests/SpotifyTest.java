@@ -24,7 +24,7 @@ public class SpotifyTest {
     SpotifyMainPage spotifyMainPage;
     SpotifyShowListPage spotifyShowListPage;
     final String username = "farkasrichardev0511@gmail.com";
-    final String password = "Selenium0511";
+    final String password = "Selenium05111";
     final String file = "Azariah.txt";
     final String[] musicArr = {
             "Bon Jovi It's My Life",
